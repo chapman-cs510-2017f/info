@@ -1,0 +1,56 @@
+\documentclass[aps,pra,notitlepage,amsmath,amssymb,letterpaper,12pt]{revtex4-1}
+\usepackage{amsthm}
+\usepackage{graphicx}
+%  Above uses the Americal Physical Society template for Physical Review A
+%  as a reasonable and fully-featured default template
+ 
+%  Below define helpful commands to set up problem environments easily
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+ 
+% --------------------------------------------------------------
+%                   Document Begins Here
+% --------------------------------------------------------------
+ 
+\begin{document}
+ 
+\title{Document X}
+\author{Jo Student}
+\affiliation{PHYS 220, Schmid College of Science and Technology, Chapman University}
+\date{\today}
+
+\maketitle
+
+\section{Section Title Here} % Specify main sections this way
+
+% x.yz is the problem number
+\begin{problem}{x.yz} 
+Problem statement goes here.
+\end{problem}
+ 
+\begin{solution} %You can also use proof in place of solution
+Treat equations as part of complete sentences.  For example, the Schr\"odinger equation can be written in the position representation as
+\begin{align}
+i\hbar \partial_t \psi(x,t) &= \hat{H}\psi(x,t) \\
+&= -\frac{\hbar^2}{2m}\nabla^2\psi(x,t) + V(x)\psi(x,t). \nonumber
+\end{align}
+% Use align environments for equations. The \\ is a newline character. The & is the alignment character.
+% Using align* or \nonumber on each line removes equation numbers
+\end{solution}
+
+\subsection{Subsection Title Here} % Specify subsections and subsubsections this way
+
+Figures can be included easily.
+
+\begin{figure}[h!] % h forces the figure to be placed here, in the text
+  \includegraphics[width=0.4\textwidth]{stormtroopocat.jpg}  % if pdflatex is used, jpg, pdf, and png are permitted
+  \caption{The figure caption goes here.}
+  \label{fig:figlabel}
+\end{figure}
+
+This text should be below the figure unless \LaTeX  decides that a different layout works better.
+ 
+% Repeat as needed
+ 
+\end{document}
